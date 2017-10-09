@@ -12,7 +12,7 @@ import work.study.ui.service.ArticleInfoService;
 
 @Controller
 public class ContactController {
-	private static Long categoryId = null;
+	private static Long categoryId = 0L;
 	
 	@Autowired
 	private ArticleInfoService articleInfoService;

@@ -11,6 +11,7 @@
 							</div>
 						--!>	
 							<h4>最新最热</h4>
+							<#if popurs ??>
 							<#list popurs as article>
 							<div class="blog-grids  wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
 								<div class="blog-grid-left">
@@ -26,6 +27,7 @@
 								<div class="clearfix"></div>
 							</div>
 							</#list>
+							</#if>
 							<div class="twt">
 							</div>
 						</div>

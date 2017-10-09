@@ -35,25 +35,26 @@
 					id="bs-example-navbar-collapse-1">
 					<nav class="link-effect-7" id="link-effect-7">
 						<ul class="nav navbar-nav">
-							<li <#if pageIndex=="home">class="active act"</#if>>
+						<#assign pg = "${pageIndex!}">
+							<li <#if pg =="home">class="active act"</#if>>
 								<a href="${base}/index.html">首页</a>
 							</li>
-							<li <#if pageIndex=="course">class="active act"</#if>>
+							<li <#if pg=="course">class="active act"</#if>>
 								<a href="${base}/course.html">课程介绍</a>
 							</li>
-							<li <#if pageIndex=="projects">class="active act"</#if>>
+							<li <#if pg=="projects">class="active act"</#if>>
 								<a href="${base}/projects.html">项目介绍</a>
 							</li>
-							<li <#if pageIndex=="answer">class="active act"</#if>>
+							<li <#if pg=="answer">class="active act"</#if>>
 								<a href="${base}/answer/1.html">招生问答</a>
 							</li>
-							<li <#if pageIndex=="technology">class="active act"</#if>>
+							<li <#if pg=="technology">class="active act"</#if>>
 								<a href="${base}/technology/1.html">技术文章</a>
 							</li>
-							<li <#if pageIndex=="book">class="active act"</#if>>
+							<li <#if pg=="book">class="active act"</#if>>
 								<a href="${base}/book/1.html">资料下载</a>
 							</li>
-							<li <#if pageIndex=="contact">class="active act"</#if>>
+							<li <#if pg=="contact">class="active act"</#if>>
 								<a href="${base}/contact.html">联系我们</a>
 							</li>
 						</ul>
