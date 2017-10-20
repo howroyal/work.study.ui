@@ -5165,10 +5165,6 @@ a.y-btn-blue.active, a.y-btn-blue:hover {
 	font-size: 16px
 }
 
-.yq-top-banner .expert-info .expert-detail .top-info .add-btn:hover {
-	background: #fa4b2a;
-	color: #fff
-}
 
 .yq-top-banner .expert-info .expert-detail .bottom-info {
 	padding-top: 10px;
@@ -5233,12 +5229,12 @@ a.y-btn-blue.active, a.y-btn-blue:hover {
 
 .yq-news-list .subject-item:hover {
 	position: relative;
-	border: 1px solid #fa4b2a !important;
+	border: 1px solid #337ab7 !important;
 	margin-top: -1px
 }
 
 .yq-news-list .subject-item:hover .s-title a {
-	color: #fa4b2a !important
+	color: #337ab7 !important
 }
 
 .yq-news-list .subject-item .expert-info {
@@ -5285,12 +5281,12 @@ a.y-btn-blue.active, a.y-btn-blue:hover {
 
 .yq-news-list .subject-item .s-content .s-title a {
 	font-size: 20px;
-	color: #000;
+	color: #337ab7;
 	text-decoration: none
 }
 
 .yq-news-list .subject-item .s-content .s-title a:hover {
-	color: #fa4b2a
+	color: #0080ff
 }
 
 .yq-news-list .subject-item .s-content .s-info {
@@ -5300,8 +5296,9 @@ a.y-btn-blue.active, a.y-btn-blue:hover {
 .yq-news-list .subject-item .s-content .s-info span {
 	float: left;
 	padding-top: 4px;
+	padding-right: 20px;
 	color: #999;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 .yq-news-list .subject-item .s-content .s-desc {

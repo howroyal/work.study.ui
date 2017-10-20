@@ -1,3 +1,4 @@
+<link rel="icon" type="image/x-icon" href="/images/favicon.png">
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>

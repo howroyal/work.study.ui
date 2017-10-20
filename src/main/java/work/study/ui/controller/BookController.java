@@ -14,7 +14,7 @@ import work.study.ui.service.ArticleInfoService;
 import work.study.ui.util.PageCode;
 
 /**
- * 电子书下载
+ * 资料下载
  * @author hao.wang
  *
  */

@@ -1,3 +1,4 @@
+<link rel="icon" type="image/x-icon" href="/images/favicon.png">
 <#assign base=request.contextPath />
 <!DOCTYPE HTML>
 <html>
@@ -40,7 +41,8 @@
 											<a href="${base}/article/${article.id}.html" target="_blank">${article.title}</a>
 										</h3>
 										<p class="s-info">
-											<span>${article.createTime}</span>
+											<span>发布时间:${article.createTime}</span>
+											<span>浏览:100</span>
 										</p>
 										<p class="s-desc">
 											${article.descr}...

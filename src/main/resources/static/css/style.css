@@ -405,22 +405,15 @@ i.glyphicon.glyphicon-comment {
   padding: 4em 0;
   position: relative;
 }
-.tc-ch h3 a,.wthree h3 a {
-    color: #fa4b2a;
-    font-weight: 600;
-}
-.tc-ch h3 a:hover, .wthree h3 a:hover {
-    color: #000000;
-}
 .tc-ch p,.wthree p {
     color: #777;
     font-size: 0.875em;
-    line-height: 1.8em;
+    line-height: 1.5em;
     margin: 1em 0;
 }
 .tc-ch h3,.wthree h3  {
-    margin: 0.5em 0 0;
-	font-size:1.5em;
+    margin: 0.2em 0 0;
+	font-size:1.2em;
 }
 .wthree h3  {
 	margin:0;
@@ -704,9 +697,9 @@ i.glyphicon.glyphicon-comment {
     background: #fff;
 }
 h2.w3,h3.w3{
-    font-size: 1.3em;
+    font-size: 1.1em;
     color: #fa4b2a;
-    padding-bottom:1em;
+    padding-bottom:0.5em;
 }
 .welcome-bottom{
 	margin-top:4%;
@@ -1011,15 +1004,13 @@ width:100%;
     line-height: 1.8em;
 }
 .fea-text h4 {
-    margin: 20px 0;
+    margin: 10px 0;
     font-size: 21px;
-    color: #fa4b2a;
-    font-weight: 700;
+    text-align:center;
 }
 .fea-text p {
  color: #9c9c9c;
   font-size: 0.875em;
-  line-height: 1.8em;
 }
 .feature-botttom{
 margin-top:50px;

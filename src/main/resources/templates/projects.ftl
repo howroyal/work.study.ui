@@ -1,3 +1,4 @@
+<link rel="icon" type="image/x-icon" href="/images/favicon.png">
 <#assign base=request.contextPath />
 <!DOCTYPE HTML>
 <html>
@@ -34,7 +35,7 @@
 								</div>
 								<div class="col-md-6 tip-grid-right">
 									<div class="tip-gd-left">
-										<h4><a href="${base}/article/${article.id}.html" target="_blank">${article.title}</a></h4>
+										<h3><a href="${base}/article/${article.id}.html" target="_blank">${article.title}</a></h3>
 										<p>${article.descr}...</p>
 									</div>
 								</div>

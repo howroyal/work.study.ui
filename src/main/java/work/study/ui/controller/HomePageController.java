@@ -19,7 +19,7 @@ public class HomePageController {
 	@Autowired
 	private ArticleInfoService articleInfoService;
 	
-	@RequestMapping("/index")
+	@RequestMapping("/")
 	public ModelAndView index(){
 		ModelAndView view = new ModelAndView("index");
 		view.addObject("pageIndex", "home");

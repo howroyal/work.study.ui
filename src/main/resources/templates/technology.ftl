@@ -1,3 +1,4 @@
+<link rel="icon" type="image/x-icon" href="/images/favicon.png">
 <#assign base=request.contextPath />
 <!DOCTYPE HTML>
 <html>

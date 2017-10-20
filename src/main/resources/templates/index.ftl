@@ -1,3 +1,4 @@
+<link rel="icon" type="image/x-icon" href="/images/favicon.png">
 <#assign base=request.contextPath />
 <!DOCTYPE HTML>
 <html>
@@ -5,7 +6,7 @@
 <title>java实训基地 首页</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="武汉java培训 javaEE高级软件工程师 java技术资料下载 主流互联网技术 电子书下载" />
+<meta name="keywords" content="武汉java培训 javaEE高级软件工程师 java技术资料下载 主流互联网技术 电子书下载 java工具下载" />
 <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
@@ -23,7 +24,7 @@
 <body>
 	<#include "header.ftl">
 	<!-- banner -->
-	<div class="container-fluid">
+	<div class="container-fluid" style="margin-top:5px;">
 		<div class="row-fluid">
 			<div class="span12">
 				<div class="carousel slide" data-ride="carousel" data-interval="3000" id="carousel-374315">
@@ -155,7 +156,7 @@
 								<div class='container-fluid'>
 									<div class='row-fluid'>
 										<div class='span12'>
-											<img height=300 width=750 alt='-' src='${article.imgUrl}' />
+											<img class="img-responsive" src='${article.imgUrl}' />
 										</div>
 									</div>
 								</div>
@@ -208,9 +209,6 @@
 								<a href="${base}/article/${article.id}.html" target="_blank">${article.title}</a>
 							</h3>
 							<p>${article.descr}...</p>
-							<div class="bht1">
-								<a href="${base}/article/${article.id}.html" target="_blank">Read More</a>
-							</div>
 							<div class="clearfix"></div>
 						</div>
 						<div class="clearfix"></div>

@@ -1,8 +1,9 @@
+<link rel="icon" type="image/x-icon" href="/images/favicon.png">
 <#assign base=request.contextPath />
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>电子书下载</title>
+<title>资料下载</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
