@@ -36,7 +36,7 @@
 					<div class="carousel-inner">
 						<div class="item active">
 							<a href="/index" target="_blank" >
-								<img alt="" src="images/banner/banner-1.jpg" />
+								<img class="img-responsive center-block" alt="" src="images/banner/banner-1.jpg" />
 								<div class="carousel-caption">
 									<h4>新资讯</h4>
 									<p>焦距行业内最新最全资讯,全球视角,尽在资讯区。</p>
@@ -45,7 +45,7 @@
 						</div>
 						<div class="item">
 							<a href="/index" target="_blank" >
-								<img alt="" src="images/banner/banner-2.jpg" />
+								<img class="img-responsive center-block" alt="" src="images/banner/banner-2.jpg" />
 								<div class="carousel-caption">
 									<h4>新课程</h4>
 									<p>全新的课程设计,以授课为辅,实战为主。学过不用等于没学,全程实战,熟能生巧。</p>
@@ -54,7 +54,7 @@
 						</div>
 						<div class="item">
 							<a href="/index" target="_blank" >
-								<img alt="" src="images/banner/banner-3.jpg" />
+								<img class="img-responsive center-block" alt="" src="images/banner/banner-3.jpg" />
 								<div class="carousel-caption">
 									<h4>新项目</h4>
 									<p>高并发的分布式一线互联网电商项目全程指导,从前端到后台，一网打尽。</p>

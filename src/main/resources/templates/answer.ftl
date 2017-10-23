@@ -42,7 +42,7 @@
 										</h3>
 										<p class="s-info">
 											<span>发布时间:${article.createTime}</span>
-											<span>浏览:100</span>
+											<span>浏览:${article.viewCount}</span>
 										</p>
 										<p class="s-desc">
 											${article.descr}...

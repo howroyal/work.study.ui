@@ -18,10 +18,11 @@ public class SingleController {
 	private ArticleInfoService articleInfoService;
 	
 	@RequestMapping(value="{id}")
-	public ModelAndView article(@PathVariable("id")long id){
+	public ModelAndView article(@PathVariable("id") long id){
 		ModelAndView view = new ModelAndView("singlePage");
 		ArticleInfo info = articleInfoService.getById(id);
 		List<ArticleInfo> popurs = articleInfoService.getPopur(info.getCategoryId());
+		articleInfoService.increaseViewCount(id);
 		view.addObject("pageIndex", "home");
 		view.addObject("article", info);
 		view.addObject("popurs", popurs);

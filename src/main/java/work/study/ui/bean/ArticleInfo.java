@@ -47,6 +47,10 @@ public class ArticleInfo implements Serializable{
 	@Column
 	private String descr;
 	
+	//浏览数
+	@Column(name="view_count")
+	private int viewCount;
+	
 	@Lob 
 	@Basic(fetch = FetchType.LAZY) 
 	@Column(name="content", columnDefinition="longtext", nullable=true) 
@@ -141,6 +145,14 @@ public class ArticleInfo implements Serializable{
 
 	public void setTheTop(Boolean theTop) {
 		this.theTop = theTop;
+	}
+
+	public int getViewCount() {
+		return viewCount;
+	}
+
+	public void setViewCount(int viewCount) {
+		this.viewCount = viewCount;
 	}
 
 }

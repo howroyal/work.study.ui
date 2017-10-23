@@ -27,10 +27,9 @@
 							<div class="b-bottom">
 								<p class="sub">${article.content}</p>
 								<p>
-									${article.createTime} <a class="span_link" href="#"><span
-										class="glyphicon glyphicon-comment"></span>0 </a><a
+									${article.createTime}<a
 										class="span_link" href="#"><span
-										class="glyphicon glyphicon-eye-open"></span>56 </a>
+										class="glyphicon glyphicon-eye-open"></span>${article.viewCount}</a>
 								</p>
 							</div>
 						</div>

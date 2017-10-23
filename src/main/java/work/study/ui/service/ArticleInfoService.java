@@ -26,6 +26,7 @@ public class ArticleInfoService {
 	@Autowired
 	private ArticleInfoDao articleInfoDao;
 	
+	@Cacheable(key="#id", value="getById")
 	public ArticleInfo getById(Long id){
 		return articleInfoDao.findOne(id);
 	}
@@ -88,6 +89,19 @@ public class ArticleInfoService {
 
 	public void update(ArticleInfo articleInfo) {
 		articleInfoDao.save(articleInfo);
+	}
+
+	/**
+	 * 流量量加1
+	 * @param id
+	 */
+	public void increaseViewCount(long id) {
+		ArticleInfo articleInfo = articleInfoDao.findOne(id);
+		if (articleInfo != null) {
+			articleInfo.setViewCount(articleInfo.getViewCount()+1);
+			articleInfoDao.save(articleInfo);
+		}
+		
 	}
 	
 }
