@@ -21,7 +21,7 @@
   <![endif]-->
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="img/favicon/favicon.png">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico">
 </head>
 
 <body>

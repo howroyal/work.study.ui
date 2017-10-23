@@ -1,4 +1,4 @@
-<link rel="icon" type="image/x-icon" href="/images/favicon.png">
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <#assign base=request.contextPath />
 <!DOCTYPE HTML>
 <html>
