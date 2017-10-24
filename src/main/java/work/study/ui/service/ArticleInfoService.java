@@ -65,8 +65,9 @@ public class ArticleInfoService {
 	
 	@Cacheable(key="#queryInfo.categoryId + '_' + #queryInfo.theTop + '_' +#pageNum +'_' + #pageSize",value="getArticleInfos")
 	public Page<ArticleInfo> getArticleInfos(final ArticleInfo queryInfo,int pageNum,int pageSize){
-		Sort sort = new Sort(Direction.DESC, "id");
-		sort.and(new Sort(Direction.ASC, "theTop"));
+		Sort sort = new Sort(Direction.DESC, "id")
+				.and(new Sort(Direction.DESC, "viewCount"))
+				.and(new Sort(Direction.ASC, "theTop"));
 		Pageable pageable = new PageRequest(pageNum, pageSize, sort);
 		Specification<ArticleInfo> spec = new Specification<ArticleInfo>() {
 

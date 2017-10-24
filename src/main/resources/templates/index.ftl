@@ -27,44 +27,27 @@
 	<div class="container-fluid" style="margin-top:5px;">
 		<div class="row-fluid">
 			<div class="span12">
-				<div class="carousel slide" data-ride="carousel" data-interval="3000" id="carousel-374315">
+				<div class="carousel slide" data-ride="carousel" data-interval="3000" id="carousel">
 					<ol class="carousel-indicators">
-						<li data-slide-to="0" data-target="#carousel-374315" class="active"></li>
-						<li data-slide-to="1" data-target="#carousel-374315"></li>
-						<li data-slide-to="2" data-target="#carousel-374315"></li>
+						<#list banners as article>
+						<li data-slide-to="${article_index}" data-target="#carousel" class="<#if article_index == 0>active</#if>"></li>
+						</#list>
 					</ol>
 					<div class="carousel-inner">
-						<div class="item active">
-							<a href="/index" target="_blank" >
-								<img class="img-responsive center-block" alt="" src="images/banner/banner-1.jpg" />
+						<#list banners as article>
+						<div class="item <#if article_index == 0>active</#if>">
+							<a href="${base}/article/${article.id}.html" target="_blank">
+								<img class="img-responsive center-block" alt="" src="${article.imgUrl}" />
 								<div class="carousel-caption">
-									<h4>新资讯</h4>
-									<p>焦距行业内最新最全资讯,全球视角,尽在资讯区。</p>
+									<h4>${article.title}</h4>
+									<p>${article.descr}</p>
 								</div>
 							</a>	
 						</div>
-						<div class="item">
-							<a href="/index" target="_blank" >
-								<img class="img-responsive center-block" alt="" src="images/banner/banner-2.jpg" />
-								<div class="carousel-caption">
-									<h4>新课程</h4>
-									<p>全新的课程设计,以授课为辅,实战为主。学过不用等于没学,全程实战,熟能生巧。</p>
-								</div>
-							</a>	
-						</div>
-						<div class="item">
-							<a href="/index" target="_blank" >
-								<img class="img-responsive center-block" alt="" src="images/banner/banner-3.jpg" />
-								<div class="carousel-caption">
-									<h4>新项目</h4>
-									<p>高并发的分布式一线互联网电商项目全程指导,从前端到后台，一网打尽。</p>
-								</div>
-							</a>	
-						</div>
+						</#list>
 					</div>
-					<a data-slide="prev" href="#carousel-374315"
-						class="left carousel-control">‹</a> <a data-slide="next"
-						href="#carousel-374315" class="right carousel-control">›</a>
+					<a data-slide="prev" href="#carousel"class="left carousel-control">‹</a> 
+					<a data-slide="next" href="#carousel" class="right carousel-control">›</a>
 				</div>
 			</div>
 		</div>

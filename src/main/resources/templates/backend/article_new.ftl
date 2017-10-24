@@ -29,6 +29,7 @@
 							  <option value="4">技术文章</option>
 							  <option value="5">资料下载</option>
 							  <option value="6">首页文章</option>
+							  <option value="7">Banner</option>
 							</select>
 						</div>
 					</div>

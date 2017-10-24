@@ -26,6 +26,9 @@ public class HomePageController {
 		List<ArticleInfo> popurs = articleInfoService.getPopur(1L);
 		view.addObject("popurs", popurs);
 		
+		//取得banner列表
+		List<ArticleInfo> banners = getBanner();
+		view.addObject("banners", banners);
 		//取得首页大图文章
 		List<ArticleInfo> firstArticles = getHomeArticles(true,1);
 		view.addObject("firstArticles", firstArticles);
@@ -61,6 +64,16 @@ public class HomePageController {
 		queryInfo.setCategoryId(6L);
 		queryInfo.setTheTop(top);
 		Page<ArticleInfo> page = articleInfoService.getArticleInfos(queryInfo, 0, size);
+		return page.getContent();
+	}
+	
+	/** 取得首页文章
+	 * @return
+	 */
+	private List<ArticleInfo> getBanner(){
+		ArticleInfo queryInfo = new ArticleInfo();
+		queryInfo.setCategoryId(7L);
+		Page<ArticleInfo> page = articleInfoService.getArticleInfos(queryInfo, 0, 10);
 		return page.getContent();
 	} 
 }
