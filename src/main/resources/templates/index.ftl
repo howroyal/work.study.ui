@@ -24,7 +24,7 @@
 <body>
 	<#include "header.ftl">
 	<!-- banner -->
-	<div class="container-fluid" style="margin-top:5px;">
+	<div class="container-fluid" style="margin-top:5px;max-width:1170px;margin-bottom:5px;">
 		<div class="row-fluid">
 			<div class="span12">
 				<div class="carousel slide" data-ride="carousel" data-interval="3000" id="carousel">
