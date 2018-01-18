@@ -11,7 +11,7 @@ import javax.persistence.Lob;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="article_content_info")
+@Table(name="article_content")
 public class ArticleContentInfo {
 
 	@Id
