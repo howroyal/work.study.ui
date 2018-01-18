@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import work.study.ui.bean.ArticleInfo;
 import work.study.ui.bean.JsonVo;
+import work.study.ui.service.ArticleContentService;
 import work.study.ui.service.ArticleInfoService;
 
 @Controller
@@ -21,6 +22,9 @@ public class ArticleManagerController {
 	
 	@Autowired
 	private ArticleInfoService articleInfoService;
+	
+	@Autowired
+	private ArticleContentService articleContentService;
 
 	@RequestMapping("index")
 	public String index(){
@@ -43,6 +47,8 @@ public class ArticleManagerController {
 		boolean success = false;
 		String message = "";
 		try {
+			Long contentId = articleContentService.addByContent(info.getContent());
+			info.setContentId(contentId);
 			articleInfoService.add(info);
 			success = true;
 			message = "success";
@@ -77,14 +83,21 @@ public class ArticleManagerController {
 	}
 	
 	@ResponseBody
-	@RequestMapping(value="edit",method=RequestMethod.POST)
+	@RequestMapping(value="edit", method=RequestMethod.POST)
 	public JsonVo<String> edit(ArticleInfo articleInfo){
 		boolean success = false;
 		String message = "";
 		try {
-			articleInfoService.update(articleInfo);
-			success = true;
-			message = "success";
+			ArticleInfo db = articleInfoService.getById(articleInfo.getId());
+			if (db == null) {
+				message = "数据不存在";
+			}else {
+				articleInfo.setContentId(db.getContentId());
+				articleInfoService.update(articleInfo);
+				success = true;
+				message = "success";
+			}
+			
 		} catch (Exception e) {
 			message = e.getMessage();
 			logger.log(Level.WARNING, message);

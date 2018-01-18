@@ -17,7 +17,9 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import work.study.ui.bean.ArticleContentInfo;
 import work.study.ui.bean.ArticleInfo;
+import work.study.ui.dao.ArticleContentDao;
 import work.study.ui.dao.ArticleInfoDao;
 
 @Service
@@ -25,6 +27,10 @@ public class ArticleInfoService {
 
 	@Autowired
 	private ArticleInfoDao articleInfoDao;
+	@Autowired
+	private ArticleContentDao articleContentDao;
+	
+	
 	
 	@Cacheable(key="#id", value="getById")
 	public ArticleInfo getById(Long id){
@@ -89,6 +95,10 @@ public class ArticleInfoService {
 	}
 
 	public void update(ArticleInfo articleInfo) {
+		ArticleContentInfo ac = new ArticleContentInfo();
+		ac.setContent(articleInfo.getContent());
+		ac.setId(articleInfo.getContentId());
+		articleContentDao.save(ac);
 		articleInfoDao.save(articleInfo);
 	}
 

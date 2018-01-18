@@ -6,14 +6,13 @@ import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 /**
  * 文章信息
@@ -51,10 +50,8 @@ public class ArticleInfo implements Serializable{
 	@Column(name="view_count")
 	private int viewCount;
 	
-	@Lob 
-	@Basic(fetch = FetchType.LAZY) 
-	@Column(name="content", columnDefinition="longtext", nullable=true) 
-	private String content;
+	@Column(name="content_id",nullable=false)
+	private Long contentId;
 	
 	@Basic(optional = false)
 	@Column(name="create_time",columnDefinition="TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
@@ -66,6 +63,12 @@ public class ArticleInfo implements Serializable{
 	
 	@Column(name="the_top",nullable = false, columnDefinition = "TINYINT(1)")
 	private Boolean theTop;
+	
+	/**
+	 * 文章内容，冗余字段，不持久化到数据库
+	 */
+	@Transient
+	private String content;
 
 	public Long getId() {
 		return id;
@@ -115,14 +118,6 @@ public class ArticleInfo implements Serializable{
 		this.descr = descr;
 	}
 
-	public String getContent() {
-		return content;
-	}
-
-	public void setContent(String content) {
-		this.content = content;
-	}
-
 	public Date getCreateTime() {
 		return createTime;
 	}
@@ -153,6 +148,22 @@ public class ArticleInfo implements Serializable{
 
 	public void setViewCount(int viewCount) {
 		this.viewCount = viewCount;
+	}
+
+	public Long getContentId() {
+		return contentId;
+	}
+
+	public void setContentId(Long contentId) {
+		this.contentId = contentId;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 }
