@@ -1343,9 +1343,10 @@ ul.nav.nav-pills {
 /*-- /single--*/
 p.sub {
     line-height: 1.9em;
-    font-size: 0.9em;
-    color: #777;
-	margin-bottom: 1em;
+    font-size: 1em;
+    color: #444;
+	margin-top:1em;
+	margin-bottom: 0.5em;
 }
 ul.share {
 	margin: 2em 0 3em 0;
@@ -1548,12 +1549,11 @@ p.reply i{
 }
 h5.top {
     color: #fa4b2a;
-    font-size: 1.6em;
-    font-weight: 600;
-    margin: 0.8em 0;
+    font-size: 1.5em;
+    font-weight: 500;
 }
 .single {
-    margin-top: 3em;
+    margin-top: 1.5em;
 }
 span.glyphicon.glyphicon-comment:hover, span.glyphicon.glyphicon-eye-open:hover, span.glyphicon.glyphicon-thumbs-up:hover, a.span_link {
     color: #000008;

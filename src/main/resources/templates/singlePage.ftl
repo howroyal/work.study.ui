@@ -23,13 +23,12 @@
 					<div class="agileinfo">
 						<h5 class="top" style="text-align:center;">${article.title}</h5>
 						<div class="single">
-							<img src="${article.imgUrl}" class="img-responsive" alt="">
+							<img src="${article.imgUrl}" class="img-responsive center-block" alt="">
 							<div class="b-bottom">
 								<p class="sub">${article.content}</p>
-								<p>
-									${article.createTime}<a
-										class="span_link" href="#"><span
-										class="glyphicon glyphicon-eye-open"></span>${article.viewCount}</a>
+								<p class="sub" style="float:right;margin-top:-0.8em;">
+									${article.createTime}<span
+										class="glyphicon glyphicon-thumbs-up"></span>${article.viewCount}
 								</p>
 							</div>
 						</div>
