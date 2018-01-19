@@ -19,8 +19,8 @@
 <body>
 	<#include "header.ftl"/>
 		<!-- technology-left -->
-		<div class="technology">
-			<div class="container">
+		<div class="technology container-fluid" style="margin-top:90px;max-width:1170px;margin-bottom:5px;">
+			<div class="container-fluid">
 				<div class="col-md-9 technology-left">
 					<div class="music">
 						<div class="latest">
@@ -29,7 +29,7 @@
 								<div class="col-md-6 tip-grid">
 									<figure class="effect-julia">
 										<a href="${base}/article/${article.id}.html" target="_blank">
-											<img src="${article.imgUrl}" alt="">
+											<img style="width:380px;height:150px;max-width:380px;max-height:150px;" src="${article.imgUrl}" alt="">
 										</a>
 									</figure>
 								</div>

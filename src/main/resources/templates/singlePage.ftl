@@ -17,7 +17,7 @@
 <body>
 	<#include "header.ftl">
 		<!-- technology-left -->
-		<div class="technology">
+		<div class="technology container-fluid" style="margin-top:90px;max-width:1170px;margin-bottom:5px;">
 			<div class="container">
 				<div class="col-md-9 technology-left">
 					<div class="agileinfo">

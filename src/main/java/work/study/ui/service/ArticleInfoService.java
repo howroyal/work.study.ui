@@ -30,9 +30,7 @@ public class ArticleInfoService {
 	@Autowired
 	private ArticleContentDao articleContentDao;
 	
-	
-	
-	@Cacheable(key="#id", value="getById")
+	@Cacheable(key="#id", value="getArticleById")
 	public ArticleInfo getById(Long id){
 		return articleInfoDao.findOne(id);
 	}
@@ -112,7 +110,6 @@ public class ArticleInfoService {
 			articleInfo.setViewCount(articleInfo.getViewCount()+1);
 			articleInfoDao.save(articleInfo);
 		}
-		
 	}
 	
 }

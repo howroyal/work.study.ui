@@ -32,7 +32,7 @@ public class ArticleContentService {
 		articleContentDao.save(entity);
 	}
 	
-	@Cacheable(key="#id", value="contentgetById")
+	@Cacheable(key="#id", value="getcontentById")
 	public ArticleContentInfo getById(Long id){
 		return articleContentDao.findOne(id);
 	}

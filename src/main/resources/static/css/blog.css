@@ -5195,13 +5195,13 @@ a.y-btn-blue.active, a.y-btn-blue:hover {
 .yq-news-list {
 	border: 1px solid #e9e9e9;
 	border-width: 1px 0 0;
-	width: 780px
+	width: 755px
 }
 
 .yq-news-list .subject-item {
-	padding: 23px 30px 10px;
+	padding: 13px 20px 10px;
 	border: 1px solid #e9e9e9;
-	border-width: 0 1px 1px
+	border-width: 0 1px 1px;
 }
 
 .yq-news-list .subject-item:after {
@@ -5229,8 +5229,8 @@ a.y-btn-blue.active, a.y-btn-blue:hover {
 
 .yq-news-list .subject-item:hover {
 	position: relative;
-	border: 1px solid #337ab7 !important;
-	margin-top: -1px
+	border: 1px solid #f6f6f6 !important;
+	margin-top: -1px;
 }
 
 .yq-news-list .subject-item:hover .s-title a {
@@ -5270,7 +5270,11 @@ a.y-btn-blue.active, a.y-btn-blue:hover {
 .yq-news-list .subject-item .s-content {
 	position: relative;
 	padding-left: 0;
-	min-height: 100px
+	min-height: 100px;
+	cursor : pointer;
+}
+.yq-news-list .subject-item:hover{
+	background: #fafafa;
 }
 
 .yq-news-list .subject-item .s-content .s-title {

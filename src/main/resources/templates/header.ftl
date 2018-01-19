@@ -1,3 +1,4 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 <div class="header" id="ban">
 	<div class="container">
 	<div class="navbar-header">
@@ -48,7 +49,7 @@
 		<div class="clearfix"></div>
 	</div>
 </div>
-
+</nav>
 <div class="header-bottom">
 <!--
 	<div class="container">
