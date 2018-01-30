@@ -69,7 +69,7 @@
 							<div class="col-md-6 fea-grid">
 								<div class="fea-img">
 									<a href="${base}/article/${article.id}.html" target="_blank">
-										<img height=200 width=350 src="${article.imgUrl}" alt="">
+										<img height=180 width=350 src="${article.imgUrl}" alt="">
 									</a>
 								</div>
 								<div class="fea-text">

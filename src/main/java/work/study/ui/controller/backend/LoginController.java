@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/backend")
+@RequestMapping("/login")
 public class LoginController {
 	
 	@RequestMapping("/loginSign")
@@ -22,7 +22,7 @@ public class LoginController {
 				cookie.setPath("/");
 				response.addCookie(cookie);
 				request.getSession().setAttribute("user_id", userId);
-				response.sendRedirect("article/index.html");
+				response.sendRedirect("/backend/article/index.html");
 			}else {
 				response.sendError(HttpServletResponse.SC_BAD_REQUEST);
 			}

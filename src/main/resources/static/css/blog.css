@@ -35,7 +35,6 @@ a:hover {
 }
 
 .yq-main {
-	width: 1200px;
 	margin: 40px auto;
 	position: relative;
 	min-height: 600px
@@ -64,7 +63,6 @@ a:hover {
 
 .yq-main .yq-main-left {
 	float: left;
-	width: 908px;
 	position: relative
 }
 
@@ -5195,19 +5193,17 @@ a.y-btn-blue.active, a.y-btn-blue:hover {
 .yq-news-list {
 	border: 1px solid #e9e9e9;
 	border-width: 1px 0 0;
-	width: 755px
 }
 
 .yq-news-list .subject-item {
-	padding: 13px 20px 10px;
-	border: 1px solid #e9e9e9;
-	border-width: 0 1px 1px;
-}
-
-.yq-news-list .subject-item:after {
-	content: "";
-	display: block;
-	clear: both
+    margin-bottom: 10px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .yq-news-list .subject-item .img-info {
@@ -5227,11 +5223,6 @@ a.y-btn-blue.active, a.y-btn-blue:hover {
 	margin-left: 214px
 }
 
-.yq-news-list .subject-item:hover {
-	position: relative;
-	border: 1px solid #f6f6f6 !important;
-	margin-top: -1px;
-}
 
 .yq-news-list .subject-item:hover .s-title a {
 	color: #337ab7 !important
@@ -5268,8 +5259,8 @@ a.y-btn-blue.active, a.y-btn-blue:hover {
 }
 
 .yq-news-list .subject-item .s-content {
+	padding: 16px 20px;
 	position: relative;
-	padding-left: 0;
 	min-height: 100px;
 	cursor : pointer;
 }

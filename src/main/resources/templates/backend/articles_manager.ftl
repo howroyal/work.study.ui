@@ -43,7 +43,7 @@
 <body>
 <div class="navbar navbar-fixed-top bs-docs-nav" role="banner">
 
-    <div class="conjtainer">
+    <div class="container">
 
       <!-- Navigation starts -->
       <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">         
@@ -65,13 +65,12 @@
             <ul class="dropdown-menu">
               <li><a href="#"><i class="icon-user"></i> 简介</a></li>
               <li><a href="#"><i class="icon-cogs"></i> 设置</a></li>
-              <li><a href="login.html"><i class="icon-off"></i> 退出</a></li>
+              <li><a href="/backend/login.html"><i class="icon-off"></i> 退出</a></li>
             </ul>
           </li>
-          
         </ul>
+        <p id="webLogCount" class="pull-right navbar-text">总访问量:0</p>
       </nav>
-
     </div>
   </div>
 
@@ -107,7 +106,7 @@
                 <div class="widget-head">
 				<form class="form-inline">类别:
 				  <div class="form-group">
-					<select class="form-control">
+					<select id="type" class="form-control">
 					  <option value="0">全部类别</option>
 					  <option value="1">课程介绍</option>
 					  <option value="2">项目介绍</option>
@@ -122,11 +121,12 @@
 				 	<span class="glyphicon glyphicon-plus"></span> 
 				 	 新增文章
 				  </button>	
-				  
+				  <!--
 				  <button id="addButton" type="button" class="btn btn-success">
 				 	<span class="glyphicon glyphicon-plus"></span> 
 				 	 查询
-				  </button>		  
+				  </button>	
+				  -->	  
 				</form>	
                   <div class="clearfix"></div>
                 </div>

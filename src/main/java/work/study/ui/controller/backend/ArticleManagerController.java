@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import work.study.ui.bean.ArticleContentInfo;
 import work.study.ui.bean.ArticleInfo;
 import work.study.ui.bean.JsonVo;
 import work.study.ui.service.ArticleContentService;
@@ -92,8 +93,16 @@ public class ArticleManagerController {
 			if (db == null) {
 				message = "数据不存在";
 			}else {
-				articleInfo.setContentId(db.getContentId());
-				articleInfoService.update(articleInfo);
+				//数据转换
+				db.setCategoryId(articleInfo.getCategoryId());
+				db.setTitle(articleInfo.getTitle());
+				db.setImgUrl(articleInfo.getImgUrl());
+				db.setTheTop(articleInfo.getTheTop());
+				db.setCategoryName(articleInfo.getCategoryName());
+				db.setDescr(articleInfo.getDescr());
+				db.setContent(articleInfo.getContent());
+				db.setDeleted(articleInfo.getDeleted());
+				articleInfoService.update(db);
 				success = true;
 				message = "success";
 			}
@@ -103,5 +112,20 @@ public class ArticleManagerController {
 			logger.log(Level.WARNING, message);
 		}
 		return new JsonVo<String>(success,message);
+	}
+	
+	@ResponseBody
+	@RequestMapping(value="getContent", method=RequestMethod.GET)
+	public String getContent(Long contentId){
+		String content = "";
+		try {
+			ArticleContentInfo info = articleContentService.getByIdForUpdate(contentId);
+			if (info != null) {
+				content = info.getContent();
+			}
+		} catch (Exception e) {
+			logger.log(Level.WARNING, e.getMessage());
+		}
+		return content;
 	}
 }

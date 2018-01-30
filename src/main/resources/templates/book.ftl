@@ -28,10 +28,10 @@
 	<!-- technology-left -->
 	<div class="technology container-fluid" style="margin-top:90px;max-width:1170px;margin-bottom:5px;">
 		<div class="container">
-			<div class="col-md-9 technology-left wow fadeInDown"
+			<div class="technology-left wow fadeInDown"
 				data-wow-duration=".8s" data-wow-delay=".2s">
-				<div class="blog">
-					<div class="yq-main expert-detail-main container">
+				<div class="blog col-md-12">
+					<div class="yq-main expert-detail-main">
 						<div class="yq-main-left">
 							<section class="yq-news-list">
 							<#list articles as article>

@@ -4,10 +4,15 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
-html, body{
-	font-family: 'Microsoft YaHei', tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
-	font-size: 100%;
-	background: #f7f7f7;
+body{
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+    font-size: 15px;
+    color: #1a1a1a;
+    background: #f6f6f6;
+    -webkit-tap-highlight-color: rgba(26,26,26,0);
+}
+div {
+    display: block;
 }
 body a,.grid_1,plan_1,plan_1.one,plan_1.two,i.icon1, i.icon2, i.icon3, i.icon4, i.icon5, i.icon6 {
 	transition:0.5s all;
@@ -45,8 +50,6 @@ label{
 .header {
     background: #FFF;
     padding: 1em 0;
-    box-shadow: 0px 1px 9px 1px #cfcfcf;
-    border-top: 2px solid #fa4b2a;
 }
 .navbar-right {
     float: left !important;
@@ -412,8 +415,9 @@ i.glyphicon.glyphicon-comment {
     margin: 1em 0;
 }
 .tc-ch h3,.wthree h3  {
-    margin: 0.2em 0 0;
+    margin: 0.5em 0 0;
 	font-size:1.2em;
+    text-align: center;
 }
 .wthree h3  {
 	margin:0;
@@ -518,7 +522,7 @@ i.glyphicon.glyphicon-comment {
     font-size: 1.5em;
     color: #fa4b2a;
     font-weight: 700;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 .insta h4 {
     font-size: 1.5em;
@@ -557,7 +561,7 @@ i.glyphicon.glyphicon-comment {
     color: #fff;
 }
 .technology-right{
-	width:30%
+	width:30%;
 }
 .technology-right-1 {
     width: 30%;
@@ -600,7 +604,7 @@ i.glyphicon.glyphicon-comment {
 /*--footer--*/
 .footer {
     background: #303030;
-    padding: 3em 0;
+    padding: 1.2em 0;
     margin-top: 0.5em;
 }
 .footer h6 {
@@ -615,6 +619,7 @@ i.glyphicon.glyphicon-comment {
     color: #fff;
     margin: 1em 0;
     line-height: 1.8em;
+    text-align: left;
 }
 .footer-middle p {
     margin: 0;
@@ -624,11 +629,12 @@ i.glyphicon.glyphicon-comment {
 	font-family: 'Open Sans', sans-serif;
 }
 .footer h4 {
-    font-size: 1.7em;
+    font-size: 1.2em;
     color: #fff;
     border-bottom: 1px solid #fff;
-    margin-bottom: 1em;
-    padding-bottom: 1em;
+    margin-bottom: 0.8em;
+    padding-bottom: 0.8em;
+    text-align: center;
 }
 .mid-btm {
     margin-bottom: 1em;
@@ -700,6 +706,7 @@ h2.w3,h3.w3{
     font-size: 1.1em;
     color: #fa4b2a;
     padding-bottom:0.5em;
+    text-align:center;
 }
 .welcome-bottom{
 	margin-top:4%;
@@ -1005,12 +1012,12 @@ width:100%;
 }
 .fea-text h4 {
     margin: 10px 0;
-    font-size: 21px;
+    font-size: 16px;
     text-align:center;
 }
 .fea-text p {
  color: #9c9c9c;
-  font-size: 0.875em;
+  font-size: 14px;
 }
 .feature-botttom{
 margin-top:50px;
@@ -1019,7 +1026,7 @@ margin-top:50px;
 margin-top:50px;
 }
 .featured-services {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
 }
 .agile-1 {
     padding: 0.1em 2em;
@@ -1206,10 +1213,10 @@ width:100%;
 }
 .music {
     background: #fff;
-    padding: 2em 2em;
+    padding: 0.5em 0.5em;
 }
 .tip-grids {
-    margin: 3em 0;
+    margin: 1em 0;
 }
 /*-- //music--*/
 /*-- contact --*/
@@ -1606,8 +1613,7 @@ span.glyphicon.glyphicon-comment, span.glyphicon.glyphicon-eye-open, span.glyphi
     margin-top: 2em;
 }
 .blog {
-    padding: 0.5em 0.5em;
-    background: #fff;
+   /* padding: 0.5em 0.5em;-*/
 }
 /*-- //blog --*/
 /*-- responsive design --*/

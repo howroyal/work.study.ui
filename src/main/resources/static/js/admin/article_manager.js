@@ -14,16 +14,24 @@ var Table = {
 			responseHandler : Table.responseHandler,
 		    columns: [{
 		        field: 'id',
-		        title: 'id'
+		        title: 'id',
+		        visible : false
+		    }, {
+		        field: 'contentId',
+		        title: 'contentId',
+		        visible : false
 		    }, {
 		        field: 'categoryName',
-		        title: '类别'
+		        title: '类别',
+		        width:150
 		    }, {
 		        field: 'title',
-		        title: '标题'
+		        title: '标题',
+		        width : 150
 		    }, {
 		        field: 'imgUrl',
 		        title: '图片',
+		        width:180,
 		        formatter : Table.picFormatter
 		    }, 
 		    {
@@ -57,6 +65,7 @@ var Table = {
 		        title: '操作',
 		        formatter : Table.formatter,
 		        events: Table.events,
+		        width : 80
 		    }]
 		});
 	},	
@@ -92,10 +101,19 @@ var Table = {
 			$('#editcategoryId').val(row.categoryId);
 			$('#editimgUrl').val(row.imgUrl);
 			$('#editdescr').val(row.descr);
-			$('#editcontent').val(row.content);
 			$('#edittheTop').val(row.theTop+"");
-			
-			$('#editModal').modal('show');
+			$.ajax({
+				url : 'getContent',
+				method : 'get',
+				data : {contentId : row.contentId},
+				error : function(){
+					$('#editModal').modal('show');
+				},
+				success : function(res){
+					$('#editcontent').val(res);
+					$('#editModal').modal('show');
+				}
+			});
 		}
 		
 	},
@@ -128,6 +146,7 @@ var Table = {
 	},
 	queryParams : function(params){
 		var param = {
+				type : $('#type').val(),
 				//type : 0,
 				pageSize: params.limit,   //页面大小
 				pageNum: params.offset/10,  //页码		
@@ -151,6 +170,15 @@ var Table = {
 }
 
 var Binder = {
+	
+	bindSearchBtn : function(){
+		$('#type').change(function(){
+			$('table').bootstrapTable('selectPage',1);
+		})
+		
+		//;
+	},
+		
 	bindAddButton : function(){
 		$('#addButton').click(function(){
 			$('#myModal').modal('show');
@@ -259,14 +287,33 @@ var Binder = {
 				}
 			});
 		})
+	},
+	
+	initWebLogCount : function(){
+
+		//设值
+		$.ajax({
+			url : '/weblog/totalCount',
+			method : 'get',
+			data :{},
+			success : function(res){
+				$('#webLogCount').html("总访问量:" + res);
+			},
+			error : function(){}
+		});
+	
+		
+		
 	}
 
 }
 
 $(function(){
 	Table.init();
+	Binder.bindSearchBtn();
 	Binder.bindAddButton();
 	Binder.bindCreateBtn();
 	Binder.bindDeleteBtn();
 	Binder.bindEditBtn();
+	Binder.initWebLogCount();
 }); 

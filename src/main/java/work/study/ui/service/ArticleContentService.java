@@ -37,6 +37,8 @@ public class ArticleContentService {
 		return articleContentDao.findOne(id);
 	}
 	
-	
+	public ArticleContentInfo getByIdForUpdate(Long id){
+		return articleContentDao.findOne(id);
+	}
 	
 }
