@@ -26,20 +26,20 @@
 						<div class="latest">
 						<#list articles as article>
 							<div class="tip-grids">
+							<div class="grid-content" onclick='window.open("${base}/article/${article.id}.html");'>
 								<div class="col-md-6 tip-grid">
 									<figure class="effect-julia">
-										<a href="${base}/article/${article.id}.html" target="_blank">
-											<img style="width:380px;height:150px;max-width:380px;max-height:150px;" src="${article.imgUrl}" alt="">
-										</a>
+										<img style="width:380px;height:150px;max-width:380px;max-height:150px;" src="${article.imgUrl}" alt="">
 									</figure>
 								</div>
 								<div class="col-md-6 tip-grid-right">
 									<div class="tip-gd-left">
-										<h3><a href="${base}/article/${article.id}.html" target="_blank">${article.title}</a></h3>
+										<h3 style='color:#337ab7;'>${article.title}</h3>
 										<p>${article.descr}...</p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
+							</div>
 							</div>
 						</#list>
 						</div>

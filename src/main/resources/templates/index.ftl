@@ -15,6 +15,11 @@
 <script src="js/bootstrap.min.js"></script>
 <!-- animation-effect -->
 <link href="css/animate.min.css" rel="stylesheet">
+<style>
+	p {
+		text-indent: 2em
+	}
+</style>
 <script src="js/wow.min.js"></script>
 <script>
 	new WOW().init();
@@ -134,69 +139,26 @@
 					<!-- technology-top -->
 					<div class="tc-ch wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
 						<#list firstArticles as article>
-						<div class="tch-img">
-							<a href="${base}/article/${article.id}.html" target="_blank">
-								<div class='container-fluid'>
-									<div class='row-fluid'>
-										<div class='span12'>
-											<img class="img-responsive" src='${article.imgUrl}' />
+						<div class="tip-grids">
+						<div class="grid-content" onclick='window.open("${base}/article/${article.id}.html");'>
+							<div class="tch-img">
+									<div class='container-fluid'>
+										<div class='row-fluid'>
+											<div class='span12'>
+												<img class="img-responsive" src='${article.imgUrl}' />
+											</div>
 										</div>
 									</div>
-								</div>
-							</a>
-						</div>
-						<h3>
-							<a href="${base}/article/${article.id}.html" target="_blank">${article.title}</a>
-						</h3>
-						<p>${article.descr}...</p>
-						<!--
-						<div class="bht1">
-							<a href="${base}/article/${article.id}.html" target="_blank">阅读全文</a>
-						</div>
-						-->
-						<div class="clearfix"></div>
-						</#list>
-					</div>
-					<!-- technology-top -->
-					<!-- technology-top -->
-					<div class="w3ls">
-						<#list secondArticles as article>
-							<div class="col-md-6 w3ls-left wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
-								<div class="tc-ch">
-									<div class="tch-img">
-										<a href="${base}/article/${article.id}.html" target="_blank"> 
-										<img src="${article.imgUrl}" class="img-responsive" alt=""></a>
-									</div>
-									<h3>
-										<a href="${base}/article/${article.id}.html" target="_blank">${article.title}</a>
-									</h3>
-									<p>${article.descr}...</p>
-									<div class="clearfix"></div>
-								</div>
 							</div>
-						</#list>
-						<div class="clearfix"></div>
-					</div>
-					<!-- technology-top -->
-					<#list thridArticles as article>
-					<div class="wthree">
-						<div class="col-md-6 wthree-left wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
-							<div class="tch-img">
-								<a href="${base}/article/${article.id}.html" target="_blank">
-									<img src="${article.imgUrl}" class="img-responsive" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6 wthree-right wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
-							<h3>
-								<a href="${base}/article/${article.id}.html" target="_blank">${article.title}</a>
+							<h3 style='color:#337ab7;'>
+								${article.title}
 							</h3>
 							<p>${article.descr}...</p>
 							<div class="clearfix"></div>
 						</div>
-						<div class="clearfix"></div>
+						</div>
+						</#list>
 					</div>
-					</#list>
 				</div>
 			</div>
 			<!-- technology-right -->

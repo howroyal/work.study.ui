@@ -412,7 +412,7 @@ i.glyphicon.glyphicon-comment {
     color: #777;
     font-size: 0.875em;
     line-height: 1.5em;
-    margin: 1em 0;
+    margin: 0.4em 0 -0.8em;
 }
 .tc-ch h3,.wthree h3  {
     margin: 0.5em 0 0;
@@ -435,11 +435,7 @@ i.glyphicon.glyphicon-comment {
 .w3ls-left {
     padding: 0;
 }
-.tc-ch {
-    background: #fff;
-    padding: 0.5em 0.52em;
-    margin-bottom: 0.5em;
-}
+
 .bht1 a{
     background: #fa4b2a;
     padding: 0.3em 0.8em;
@@ -1211,25 +1207,31 @@ width:100%;
 .tip-gd-left:nth-child(2) {
   margin-top: 60px;
 }
-.music {
-    background: #fff;
-    padding: 0.5em 0.5em;
-}
 .tip-grids {
-    margin: 1em 0;
+    margin-bottom: 10px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.grid-content {
+	padding: 16px 20px;
+    position: relative;
+    min-height: 100px;
+    cursor: pointer;
+}
+.grid-content:hover{
+	background: #fafafa;
 }
 /*-- //music--*/
 /*-- contact --*/
 .contact-section {
     padding: 10px 10px;
     background: #fff;
-}
-.google-map iframe {
-    width: 100%;
-    height: 500px;
-    border: 2px solid#CECECE;
-    padding: 15px;
-    background: #D8D8D8;
 }
 .contact-grid input[type="text"], .contact-grid textarea, .contact-grid input[type="email"] {
     display: block;

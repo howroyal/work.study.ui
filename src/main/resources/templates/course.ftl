@@ -12,10 +12,10 @@
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <style>
-								p {
-									text-indent: 2em
-								}
-							</style>
+	p {
+		text-indent: 2em
+	}
+</style>
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </head>
@@ -33,7 +33,6 @@
 									<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
 									<h4>一对一亲自授课</h4>
 									<p>从java高级工程师职责开始,中间的项目实战过程,到最后主流开源框架源代码解析,全程面对面教学.</p>
-
 								</div>
 							</div>
 							<div class="col-md-4 featured-services-grid">
@@ -41,7 +40,6 @@
 									<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
 									<h4>全程项目实战</h4>
 									<p>全程真实互联网项目实战,图片服务器,在线商城,订单管理,评论体系,搜索引擎,提升学员核心竞争力.</p>
-
 								</div>
 							</div>
 							<div class="col-md-4 featured-services-grid">
@@ -49,7 +47,6 @@
 									<span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
 									<h4>一流互联网技术</h4>
 									<p>java开发框架SSM,分布式文件管理HDFS,缓存服务REDIS,文档数据库MongoDB,搜索引擎Solr,以上技术全部教会,并且深入源码解析.</p>
-
 								</div>
 							</div>
 							<div class="clearfix"></div>
