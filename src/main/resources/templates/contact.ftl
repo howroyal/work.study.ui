@@ -56,7 +56,7 @@
 						<div class="clearfix"></div>
 					</div>
 					<div class="google-map">
-						<iframe src="${base}/contact/baidumap" allowfullscreen></iframe>
+						<iframe width="650px" height="440px" frameborder="no" src="${base}/contact/baidumap" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>

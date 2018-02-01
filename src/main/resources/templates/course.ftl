@@ -51,30 +51,29 @@
 							</div>
 							<div class="clearfix"></div>
 						</div>
+						<div class="fea-top">
+						<h3 class="w3">课程设置说明</h3>
+						<p>经过10年的互联网行业沉淀,本人发现只授课对项目上手能力完全没有任何帮助。</p>
+						<p>所以本课程是全程项目实战,只有不断的做项目，在项目过程中不断的犯错,然后不断的解决错误,才能从错误处吸取经验,形成看到PRD就能动手开发的能力.</p>
+						<p>经过大概4到5个项目,基本上具有3到5年的互联网行业经验，熟练掌握SSM开发框架,深入理解各种开源框架源码,完全理解高并发的分布式系统。</p>
+					</div>
 					</div>
 					<div class="clearfix"></div>
+					
 					<div class="features-main">
-						<div class="fea-top">
-							<h3 class="w3">课程设置说明</h3>
-							<p>经过10年的互联网行业沉淀,本人发现只授课对项目上手能力完全没有任何帮助。</p>
-							<p>所以本课程是全程项目实战,只有不断的做项目，在项目过程中不断的犯错,然后不断的解决错误,才能从错误处吸取经验,形成看到PRD就能动手开发的能力.</p>
-							<p>经过大概4到5个项目,基本上具有3到5年的互联网行业经验，熟练掌握SSM开发框架,深入理解各种开源框架源码,完全理解高并发的分布式系统。</p>
-
-						</div>
 						<div class="feature-botttom">
 							<#list articles as article>
-							<div class="col-md-6 fea-grid">
+							<div class="tip-grids">
+							<div class="grid-content" onclick='window.open("${base}/article/${article.id}.html");'>
 								<div class="fea-img">
-									<a href="${base}/article/${article.id}.html" target="_blank">
-										<img height=180 width=350 src="${article.imgUrl}" alt="">
-									</a>
+									<img height=200 width=300 src="${article.imgUrl}" alt="">
 								</div>
 								<div class="fea-text">
-									<a href="${base}/article/${article.id}.html" target="_blank"><h4>${article.title}</h4>
-									</a>
+									<h4>${article.title}</h4>
 									<p>${article.descr}</p>
 								</div>
 								<div class="clearfix"></div>
+							</div>
 							</div>
 							</#list>
 							<div class="clearfix"></div>

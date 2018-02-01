@@ -142,13 +142,9 @@
 						<div class="tip-grids">
 						<div class="grid-content" onclick='window.open("${base}/article/${article.id}.html");'>
 							<div class="tch-img">
-									<div class='container-fluid'>
-										<div class='row-fluid'>
-											<div class='span12'>
-												<img class="img-responsive" src='${article.imgUrl}' />
-											</div>
-										</div>
-									</div>
+								<div class='span12'>
+									<img class="img-responsive" src='${article.imgUrl}' />
+								</div>
 							</div>
 							<h3 style='color:#337ab7;'>
 								${article.title}
