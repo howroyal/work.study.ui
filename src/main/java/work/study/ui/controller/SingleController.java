@@ -32,7 +32,7 @@ public class SingleController {
 			}
 		}
 		
-		List<ArticleInfo> popurs = articleInfoService.getPopur(info.getCategoryId());
+		List<ArticleInfo> popurs = articleInfoService.getPopur();
 		articleInfoService.increaseViewCount(id);
 		view.addObject("pageIndex", "home");
 		view.addObject("article", info);

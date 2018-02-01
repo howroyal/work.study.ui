@@ -12,8 +12,6 @@ import work.study.ui.service.ArticleInfoService;
 
 @Controller
 public class ContactController {
-	private static Long categoryId = 0L;
-	
 	@Autowired
 	private ArticleInfoService articleInfoService;
 	
@@ -21,7 +19,7 @@ public class ContactController {
 	public ModelAndView index(){
 		ModelAndView view = new ModelAndView("contact");
 		view.addObject("pageIndex", "contact");
-		List<ArticleInfo> popurs = articleInfoService.getPopur(categoryId);
+		List<ArticleInfo> popurs = articleInfoService.getPopur();
 		view.addObject("popurs", popurs);
 		return view;
 	}

@@ -31,7 +31,7 @@ public class TechnologyController {
 	public ModelAndView index(@PathVariable(name="pageNum") int pageNum){
 		ModelAndView view = new ModelAndView("technology");
 		
-		List<ArticleInfo> popurs = articleInfoService.getPopur(categoryId);
+		List<ArticleInfo> popurs = articleInfoService.getPopur();
 		view.addObject("popurs", popurs);
 		view.addObject("pageIndex", "technology");
 		Page<ArticleInfo> page = getArticleInfos(pageNum-1);

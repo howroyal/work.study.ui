@@ -31,7 +31,7 @@ public class BookController {
 	public ModelAndView index(@PathVariable(name="pageNum") int pageNum){
 		ModelAndView view = new ModelAndView("book");
 		
-		List<ArticleInfo> popurs = articleInfoService.getPopur(categoryId);
+		List<ArticleInfo> popurs = articleInfoService.getPopur();
 		view.addObject("popurs", popurs);
 		view.addObject("pageIndex", "book");
 		Page<ArticleInfo> page = getArticleInfos(pageNum-1);

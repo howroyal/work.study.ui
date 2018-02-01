@@ -25,7 +25,7 @@ public class ProjectInfoController {
 	@RequestMapping(value = "projects")
 	public ModelAndView index(){
 		ModelAndView view = new ModelAndView("projects");
-		List<ArticleInfo> popurs = articleInfoService.getPopur(0L);
+		List<ArticleInfo> popurs = articleInfoService.getPopur();
 		
 		List<ArticleInfo> articles = getArticles(10);
 		view.addObject("popurs", popurs);

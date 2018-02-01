@@ -20,7 +20,7 @@ public class HomePageController {
 	public ModelAndView index(){
 		ModelAndView view = new ModelAndView("index");
 		view.addObject("pageIndex", "home");
-		List<ArticleInfo> popurs = articleInfoService.getPopur(1L);
+		List<ArticleInfo> popurs = articleInfoService.getPopur();
 		view.addObject("popurs", popurs);
 		
 		//取得banner列表

@@ -39,10 +39,10 @@ public class ArticleInfoService {
 		articleInfoDao.save(info);
 	}
 	
-	@Cacheable(key="#categoryId", value="getPopur")
-	public List<ArticleInfo> getPopur(Long categoryId){
+	@Cacheable(value="getPopur")
+	public List<ArticleInfo> getPopur(){
 		ArticleInfo queryInfo = new ArticleInfo();
-		queryInfo.setCategoryId(categoryId);
+		queryInfo.setCategoryId(null);
 		queryInfo.setTheTop(true);
 		Page<ArticleInfo> page = this.getArticleInfos(queryInfo, 0, 10);
 		

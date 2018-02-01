@@ -30,7 +30,7 @@ public class AnswerController {
 	public ModelAndView index(@PathVariable(name="pageNum") int pageNum){
 		ModelAndView view = new ModelAndView("answer");
 		
-		List<ArticleInfo> popurs = articleInfoService.getPopur(categoryId);
+		List<ArticleInfo> popurs = articleInfoService.getPopur();
 		view.addObject("popurs", popurs);
 		view.addObject("pageIndex", "answer");
 		Page<ArticleInfo> page = getArticleInfos(pageNum-1);

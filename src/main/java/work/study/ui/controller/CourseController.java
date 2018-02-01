@@ -28,7 +28,7 @@ public class CourseController {
 		
 		ModelAndView view = new ModelAndView("course");
 		//课程介绍
-		List<ArticleInfo> popurs = articleInfoService.getPopur(1L);
+		List<ArticleInfo> popurs = articleInfoService.getPopur();
 		view.addObject("popurs", popurs);
 		view.addObject("pageIndex", "course");
 		Page<ArticleInfo> page = getArticleInfos(10);
