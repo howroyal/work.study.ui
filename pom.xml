@@ -27,42 +27,39 @@
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
 		<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-cache</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
 		</dependency>
-		<dependency>  
-            <groupId>com.google.guava</groupId>  
-            <artifactId>guava</artifactId>  
-            <version>19.0</version>  
-        </dependency>  
-		<!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
 		<dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>1.2.0</version>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>19.0</version>
 		</dependency>
-		 -->
+		<!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter 
+			<dependency> <groupId>org.mybatis.spring.boot</groupId> <artifactId>mybatis-spring-boot-starter</artifactId> 
+			<version>1.2.0</version> </dependency> -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker
-		<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker</artifactId>
-			<version>2.3.23</version>
-		</dependency>
- -->
+		<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker <dependency> 
+			<groupId>org.freemarker</groupId> <artifactId>freemarker</artifactId> <version>2.3.23</version> 
+			</dependency> -->
 	</dependencies>
 
 	<build>
-	<finalName>work.study.ui</finalName>
+		<finalName>work.study.ui</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<dependencies>
 					<!-- spring热部署 -->
+					<dependency>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-devtools</artifactId>
+						<optional>true</optional>
+					</dependency>
 					<dependency>
 						<groupId>org.springframework</groupId>
 						<artifactId>springloaded</artifactId>
@@ -72,10 +69,10 @@
 			</plugin>
 		</plugins>
 	</build>
-	 <repositories>  
-        <repository>  
-            <id>spring-milestone</id>  
-            <url>http://repo.spring.io/libs-release</url>  
-        </repository>  
-    </repositories>  
+	<repositories>
+		<repository>
+			<id>spring-milestone</id>
+			<url>http://repo.spring.io/libs-release</url>
+		</repository>
+	</repositories>
 </project>

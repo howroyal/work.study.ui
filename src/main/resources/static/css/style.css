@@ -46,6 +46,13 @@ ul{
 label{
 	margin:0;
 }
+
+.right-title{
+    border-bottom: 1px solid #fa4b2a;
+    color: #fa4b2a;
+    font-weight: 400;
+    font-size:18px;
+}
 /*-- Header --*/
 .header {
     background: #FFF;
@@ -501,11 +508,11 @@ i.glyphicon.glyphicon-comment {
 /*--technology-right--*/
 .blog-grid-left {
     float: left;
-    width: 36%;
+    width: 30%;
 }
 .blog-grid-right {
     float: left;
-    width: 60%;
+    width: 64%;
     margin-left: 0.5em;
 }
 .tech-btm p {
