@@ -18,6 +18,18 @@
 </style>
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<!-- animation-effect -->
+<link href="css/animate.min.css" rel="stylesheet">
+<style>
+	p {
+		text-indent: 2em
+	}
+</style>
+<script src="js/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+<!-- //animation-effect -->
 </head>
 <body>
 	<#include "header.ftl"/>
@@ -26,7 +38,7 @@
 		<div class="container">
 			<div class="col-md-9 technology-left">
 				<div class="agile-1">
-					<div class="featured-services">
+					<div class="featured-services wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
 						<div class="featured-services-grids">
 							<div class="col-md-4 featured-services-grid">
 								<div class="featured-services-grd">
@@ -64,7 +76,7 @@
 						<div class="feature-botttom">
 							<#list articles as article>
 							<div class="tip-grids">
-							<div class="grid-content" onclick='window.open("${base}/article/${article.id}.html");'>
+							<div class="grid-content wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s" onclick='window.open("${base}/article/${article.id}.html");'>
 								<div class="fea-img">
 									<img height=200 width=300 src="${article.imgUrl}" alt="">
 								</div>

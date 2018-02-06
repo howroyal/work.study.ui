@@ -57,8 +57,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="services w3l wow fadeInDown" data-wow-duration=".8s"
-		data-wow-delay=".2s">
+	<div class="services w3l wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
 		<div class="container">
 			<div class="grid_3 grid_5">
 				<div class="bs-example bs-example-tabs" role="tabpanel"

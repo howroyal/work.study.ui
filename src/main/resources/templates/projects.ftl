@@ -14,7 +14,18 @@
 <link href="${base}/css/component.css" rel="stylesheet" type="text/css" />
 <script src="${base}/js/jquery-1.11.1.min.js"></script>
 <script src="${base}/js/bootstrap.min.js"></script>
-<script src="${base}/js/modernizr.custom.js"></script>
+<!-- animation-effect -->
+<link href="css/animate.min.css" rel="stylesheet">
+<style>
+	p {
+		text-indent: 2em
+	}
+</style>
+<script src="js/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+<!-- //animation-effect -->
 </head>
 <body>
 	<#include "header.ftl"/>
