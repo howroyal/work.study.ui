@@ -36,7 +36,7 @@ public class TechnologyController {
 		view.addObject("pageIndex", "technology");
 		Page<ArticleInfo> page = getArticleInfos(pageNum-1);
 		view.addObject("articles", page.getContent());
-		view.addObject("page", new PageCode(page.getTotalPages(),7,pageNum));
+		view.addObject("page", new PageCode(page.getTotalPages(),pageSize,pageNum));
 		
 		return view;
 	}

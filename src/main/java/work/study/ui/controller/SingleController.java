@@ -34,10 +34,46 @@ public class SingleController {
 		
 		List<ArticleInfo> popurs = articleInfoService.getPopur();
 		articleInfoService.increaseViewCount(id);
-		view.addObject("pageIndex", "home");
+		
+		
+		view.addObject("pageIndex", getIndex(info));
 		view.addObject("article", info);
 		view.addObject("popurs", popurs);
 		return view;
+	}
+
+	/**
+	 * 取到页签
+	 * @param info
+	 * @return
+	 */
+	private String getIndex(ArticleInfo info) {
+		String index = "home";
+		if (index != null) {
+			Long category = info.getCategoryId();
+			if (category != null) {
+				switch (category.intValue()) {
+				case 1:
+					index = "course";
+					break;
+				case 2:
+					index = "projects";
+					break;
+				case 3:
+					index = "answer";
+					break;
+				case 4:
+					index = "technology";
+					break;
+				case 5:
+					index = "book";
+					break;
+				default:
+					break;
+				}
+			}
+		}
+		return index;
 	}
 
 }
