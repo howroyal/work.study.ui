@@ -16,7 +16,7 @@
 						<input type="hidden" id="editId"/>
 						<label for="editTitle" class="col-lg-2 control-label">文章标题<font color="red">*</font>:</label>
 						<div class="col-lg-10">
-							<input type="text" class="form-control" id="editTitle" name="editTitle" maxlength="30"/>
+							<input type="text" class="form-control" id="editTitle" name="editTitle" maxlength="50"/>
 						</div>
 					</div>
 					<div class="form-group">
