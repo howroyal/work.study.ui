@@ -22,7 +22,7 @@ import work.study.ui.util.PageCode;
 public class TechnologyController {
 
 	private static long categoryId = 4L;
-	private static int pageSize = 20;
+	private static int pageSize = 10;
 	
 	@Autowired
 	private ArticleInfoService articleInfoService;
