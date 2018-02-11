@@ -37,8 +37,8 @@
 							<#list articles as article>
 								<div class="subject-item">
 									<div class="s-content" onclick='window.open("${base}/article/${article.id}.html");'>
-										<h3 class="s-title">
-											<a href="${base}/article/${article.id}.html" target="_blank">${article.title}</a>
+										<h3 class="s-title" style='color:#337ab7;'>
+											${article.title}
 										</h3>
 										<p class="s-info">
 											<span>${article.createTime}</span>
