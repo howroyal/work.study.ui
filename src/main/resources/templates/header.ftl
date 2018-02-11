@@ -1,19 +1,13 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 <div class="header" id="ban">
 	<div class="container">
-	<div class="navbar-header">
-    <a class="navbar-brand" href="${base}/">
-        <img alt="Brand" style="max-height:60px;margin-top:-25px;" src="${base}/images/logo.png">
-    </a>
-	</div>
-		<div class="head-left wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
-		</div>
-		<div class="header_right wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+		<div class=" wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
 			<nav class="navbar navbar-default">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed"
-						data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					</button>
+				 <a class="navbar-brand" href="${base}/">
+       				 <img alt="Brand" style="max-height:60px;margin-top:-25px;" src="${base}/images/logo.png">
+   				 </a>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">导航栏</button>
 				</div>
 				<div class="collapse navbar-collapse nav-wil"
 					id="bs-example-navbar-collapse-1">
