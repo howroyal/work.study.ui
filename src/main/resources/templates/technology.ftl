@@ -28,8 +28,7 @@
 	<!-- technology-left -->
 	<div class="technology container-fluid" style="margin-top:90px;max-width:1170px;margin-bottom:5px;">
 		<div class="container">
-			<div class="technology-left wow fadeInDown"
-				data-wow-duration=".8s" data-wow-delay=".2s">
+			<div class="technology-left">
 				<div class="blog col-md-12">
 					<div class="yq-main expert-detail-main">
 						<div class="yq-main-left">

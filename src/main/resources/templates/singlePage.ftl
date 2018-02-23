@@ -13,13 +13,20 @@
 <link href="${base}/css/style.css" rel='stylesheet' type='text/css' />
 <script src="${base}/js/jquery-1.11.1.min.js"></script>
 <script src="${base}/js/bootstrap.min.js"></script>
+<!-- animation-effect -->
+<link href="${base}/css/animate.min.css" rel="stylesheet">
+<script src="${base}/js/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+<!-- //animation-effect -->
 </head>
 <body>
 	<#include "header.ftl">
 		<!-- technology-left -->
 		<div class="technology container-fluid" style="margin-top:90px;max-width:1170px;margin-bottom:5px;">
 			<div class="container">
-				<div class="col-md-9 technology-left">
+				<div class="col-md-9 technology-left wow fadeInDown">
 					<div class="agileinfo">
 						<h5 class="top" style="text-align:center;">${article.title}</h5>
 						<div class="single">
