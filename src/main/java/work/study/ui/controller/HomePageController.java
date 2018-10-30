@@ -17,41 +17,42 @@ public class HomePageController {
 	private ArticleInfoService articleInfoService;
 	
 	@RequestMapping("/")
-	public ModelAndView index(){
-		ModelAndView view = new ModelAndView("index");
-		view.addObject("pageIndex", "home");
-		List<ArticleInfo> popurs = articleInfoService.getPopur();
-		view.addObject("popurs", popurs);
-		
-		//取得banner列表
-		List<ArticleInfo> banners = getBanner();
-		view.addObject("banners", banners);
-		//取得首页大图文章
-		List<ArticleInfo> firstArticles = getHomeArticles(10);
-		view.addObject("firstArticles", firstArticles);
-
-		return view;
+	public String index(){
+		return "technology/1.html";
+//		ModelAndView view = new ModelAndView("index");
+//		view.addObject("pageIndex", "home");
+//		List<ArticleInfo> popurs = articleInfoService.getPopur();
+//		view.addObject("popurs", popurs);
+//
+//		//取得banner列表
+//		List<ArticleInfo> banners = getBanner();
+//		view.addObject("banners", banners);
+//		//取得首页大图文章
+//		List<ArticleInfo> firstArticles = getHomeArticles(10);
+//		view.addObject("firstArticles", firstArticles);
+//
+//		return view;
 	}
 	
 	
-	
-	/** 取得首页文章
-	 * @return
-	 */
-	private List<ArticleInfo> getHomeArticles(int size){
-		ArticleInfo queryInfo = new ArticleInfo();
-		queryInfo.setCategoryId(6L);
-		Page<ArticleInfo> page = articleInfoService.getArticleInfos(queryInfo, 0, size);
-		return page.getContent();
-	}
-	
-	/** 取得首页文章
-	 * @return
-	 */
-	private List<ArticleInfo> getBanner(){
-		ArticleInfo queryInfo = new ArticleInfo();
-		queryInfo.setCategoryId(7L);
-		Page<ArticleInfo> page = articleInfoService.getArticleInfos(queryInfo, 0, 10);
-		return page.getContent();
-	} 
+//
+//	/** 取得首页文章
+//	 * @return
+//	 */
+//	private List<ArticleInfo> getHomeArticles(int size){
+//		ArticleInfo queryInfo = new ArticleInfo();
+//		queryInfo.setCategoryId(6L);
+//		Page<ArticleInfo> page = articleInfoService.getArticleInfos(queryInfo, 0, size);
+//		return page.getContent();
+//	}
+//
+//	/** 取得首页文章
+//	 * @return
+//	 */
+//	private List<ArticleInfo> getBanner(){
+//		ArticleInfo queryInfo = new ArticleInfo();
+//		queryInfo.setCategoryId(7L);
+//		Page<ArticleInfo> page = articleInfoService.getArticleInfos(queryInfo, 0, 10);
+//		return page.getContent();
+//	}
 }
